@@ -1,58 +1,42 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:74xgxx
+LIBS:74xx
 LIBS:5050_ws2811
 LIBS:a4988-module
 LIBS:ac-dc
 LIBS:acs712
 LIBS:actel
 LIBS:adafruit
+LIBS:adc-dac
 LIBS:adxl345
 LIBS:allegro
 LIBS:Altera
 LIBS:AMS1117
 LIBS:analog_devices
+LIBS:analog_switches
 LIBS:ant
 LIBS:at24c64
+LIBS:atmel
+LIBS:audio
 LIBS:battery_management
 LIBS:bbd
 LIBS:bc56-12EWA
 LIBS:bosch
 LIBS:brooktre
+LIBS:cmos4000
 LIBS:cmos_ieee
+LIBS:conn
+LIBS:contrib
 LIBS:cp2103
 LIBS:CP2102
+LIBS:cypress
 LIBS:dc-dc
+LIBS:device
 LIBS:dht11
+LIBS:digital-audio
 LIBS:diode
+LIBS:display
+LIBS:dsp
 LIBS:elec-unifil
 LIBS:er-oled-ssd1306
 LIBS:ESD_Protection
@@ -73,6 +57,8 @@ LIBS:hc541
 LIBS:hc-05
 LIBS:HC164
 LIBS:hlk-rm04
+LIBS:intel
+LIBS:interface
 LIBS:ir
 LIBS:irf7907
 LIBS:isp_6p
@@ -81,6 +67,7 @@ LIBS:L9110
 LIBS:LargeKickstarter
 LIBS:Lattice
 LIBS:LilyPad-Wearables
+LIBS:linear
 LIBS:LM2575
 LIBS:logo
 LIBS:logo-azura-wrench
@@ -94,14 +81,18 @@ LIBS:mcp1640b
 LIBS:mcp73831
 LIBS:MCP3208
 LIBS:mechanical
+LIBS:memory
+LIBS:microchip
 LIBS:microchip_dspic33dsc
 LIBS:microchip_pic10mcu
 LIBS:microchip_pic12mcu
 LIBS:microchip_pic16mcu
 LIBS:microchip_pic18mcu
 LIBS:microchip_pic32mcu
+LIBS:microcontrollers
 LIBS:miniusb
 LIBS:motor_drivers
+LIBS:motorola
 LIBS:motors
 LIBS:mp2109dq
 LIBS:MP2307DN
@@ -113,15 +104,19 @@ LIBS:nrf24l01
 LIBS:nxp_armmcu
 LIBS:OF5032
 LIBS:onsemi
+LIBS:opto
 LIBS:Oscillators
+LIBS:philips
 LIBS:pl2303
 LIBS:pogopin
+LIBS:power
 LIBS:powerint
 LIBS:powerjack
 LIBS:Power_Management
 LIBS:pspice
 LIBS:pt4115
 LIBS:references
+LIBS:regul
 LIBS:relays
 LIBS:rfcom
 LIBS:RJ45-ENCODER
@@ -129,6 +124,7 @@ LIBS:rtl8196
 LIBS:rv3029c2
 LIBS:sensors
 LIBS:silabs
+LIBS:siliconi
 LIBS:smd oscillator
 LIBS:songle_relay
 LIBS:SparkFun-Aesthetics
@@ -162,16 +158,19 @@ LIBS:tcs3200d
 LIBS:tda5144
 LIBS:Teensy_3_and_LC_Series_Boards_v1.1
 LIBS:test
+LIBS:texas
 LIBS:texas-msp
 LIBS:tlv70233
 LIBS:tp4056
 LIBS:transf
+LIBS:transistors
 LIBS:ts812c
 LIBS:ttl_ieee
 LIBS:usb_a
 LIBS:usb-a-pcb
 LIBS:usb_ax2
 LIBS:User-Submitted
+LIBS:valves
 LIBS:video
 LIBS:w25q32bv
 LIBS:wiznet
@@ -181,6 +180,7 @@ LIBS:xc3s500evq100
 LIBS:xc6slx9-tqg144
 LIBS:XC9572-TQ100
 LIBS:Xicor
+LIBS:xilinx
 LIBS:xilinx_spartan3_virtex4_and_5
 LIBS:zetex
 LIBS:Zilog
@@ -259,13 +259,13 @@ $EndComp
 $Comp
 L LED D2
 U 1 1 592C0519
-P 4450 4150
-F 0 "D2" H 4450 4250 50  0000 C CNN
-F 1 "LED_ON" H 4450 4050 50  0000 C CNN
-F 2 "LEDs:LED_0805" H 4450 4150 50  0001 C CNN
-F 3 "" H 4450 4150 50  0001 C CNN
-	1    4450 4150
-	1    0    0    -1  
+P 4400 4150
+F 0 "D2" H 4400 4250 50  0000 C CNN
+F 1 "LED_ON" H 4400 4050 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 4400 4150 50  0001 C CNN
+F 3 "" H 4400 4150 50  0001 C CNN
+	1    4400 4150
+	0    1    1    0   
 $EndComp
 $Comp
 L DIODE D3
@@ -327,23 +327,19 @@ F 3 "" H 3000 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2900 3600 3000 3600
-Wire Wire Line
-	3000 3600 3000 3950
+	2900 3600 3150 3600
 $Comp
 L LED D1
 U 1 1 592C1895
-P 3700 3700
-F 0 "D1" H 3700 3800 50  0000 C CNN
-F 1 "LED_POWER" H 3700 3600 50  0000 C CNN
-F 2 "LEDs:LED_0805" H 3700 3700 50  0001 C CNN
-F 3 "" H 3700 3700 50  0001 C CNN
-	1    3700 3700
-	0    -1   -1   0   
+P 3700 3750
+F 0 "D1" H 3700 3850 50  0000 C CNN
+F 1 "LED_POWER" H 4000 3700 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 3700 3750 50  0001 C CNN
+F 3 "" H 3700 3750 50  0001 C CNN
+	1    3700 3750
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2900 3800 3150 3800
-Text GLabel 3150 3800 2    39   Input ~ 0
+Text GLabel 3150 3600 2    39   Input ~ 0
 IN
 Wire Wire Line
 	4900 3950 5050 3950
@@ -363,11 +359,9 @@ Wire Wire Line
 Wire Wire Line
 	4500 3950 4600 3950
 Wire Wire Line
-	4600 4150 5050 4150
-Text GLabel 4150 4150 0    39   Input ~ 0
+	4500 4150 5050 4150
+Text GLabel 4100 4150 0    39   Input ~ 0
 IN
-Wire Wire Line
-	4150 4150 4300 4150
 Wire Wire Line
 	6550 4350 6550 4500
 $Comp
@@ -452,12 +446,12 @@ $EndComp
 $Comp
 L GND #PWR06
 U 1 1 592C3895
-P 3700 3950
-F 0 "#PWR06" H 3700 3700 50  0001 C CNN
-F 1 "GND" H 3700 3800 50  0000 C CNN
-F 2 "" H 3700 3950 50  0001 C CNN
-F 3 "" H 3700 3950 50  0001 C CNN
-	1    3700 3950
+P 3700 4100
+F 0 "#PWR06" H 3700 3850 50  0001 C CNN
+F 1 "GND" H 3700 3950 50  0000 C CNN
+F 2 "" H 3700 4100 50  0001 C CNN
+F 3 "" H 3700 4100 50  0001 C CNN
+	1    3700 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -474,9 +468,7 @@ $EndComp
 Wire Wire Line
 	3700 3050 3700 3150
 Wire Wire Line
-	3700 3450 3700 3550
-Wire Wire Line
-	3700 3850 3700 3950
+	3700 3450 3700 3650
 Wire Wire Line
 	8050 3550 8600 3550
 Wire Wire Line
@@ -539,4 +531,12 @@ F 3 "" H 6550 4500 50  0001 C CNN
 	1    6550 4500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3700 3950 3700 4100
+Wire Wire Line
+	2900 3800 3000 3800
+Wire Wire Line
+	3000 3800 3000 3950
+Wire Wire Line
+	4100 4150 4200 4150
 $EndSCHEMATC
